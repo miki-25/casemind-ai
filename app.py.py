@@ -561,6 +561,11 @@ if run:
         with st.spinner("⬡ Running deep analysis…"):
 
             prompt = f"""You are a business analyst. Return ONLY valid JSON, no markdown, no extra text.
+                        - Competitors must be DIRECT competitors in the SAME industry and market segment only.
+                        - Use realistic insights
+                        - Use company-specific KPIs
+                        - Generate a detailed consulting-style business analysis for:
+
 
 Company: {company_name}
 
