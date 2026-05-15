@@ -585,7 +585,8 @@ if run:
         st.warning("Please enter a company or product name.")
     else:
         with st.spinner("⬡ Running deep analysis…"):
-
+        live_context = get_live_company_context(company_name)
+        
             prompt = f"""You are a business analyst. Return ONLY valid JSON, no markdown, no extra text.
                         - VERY IMPOSTANT Competitors must be DIRECT competitors in the SAME industry and market segment only.
                         - Use realistic insights and latest search on the web, news articles and the company website and social media platform for latest numbers for revenue also and if not available give the ans as not publically available.
