@@ -562,7 +562,7 @@ if run:
 
             prompt = f"""You are a business analyst. Return ONLY valid JSON, no markdown, no extra text.
                         - Competitors must be DIRECT competitors in the SAME industry and market segment only.
-                        - Use realistic insights
+                        - Use realistic insights and latest search on the web for latest numbers for revenue also and if not available give the ans as not publically available.
                         - Use company-specific KPIs
                         - Generate a detailed consulting-style business analysis for:
 
