@@ -3,6 +3,7 @@ from huggingface_hub import InferenceClient
 from dotenv import load_dotenv
 import plotly.express as px
 import plotly.graph_objects as go
+from duckduckgo_search import DDGS
 import pandas as pd
 import os
 import json
