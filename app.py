@@ -564,6 +564,7 @@ if run:
                         - Competitors must be DIRECT competitors in the SAME industry and market segment only.
                         - Use realistic insights and latest search on the web, news articles and the company website and social media platform for latest numbers for revenue also and if not available give the ans as not publically available.
                         - Use company-specific KPIs and also one line each how did you calculate those data 
+                        - but MAJOR THING WHICH YOU NEED TO BE CAREFULL ABOUT IS DON'T PUT ANY ASSUMTION AND TRY TO PUT ASSUMED NUMBERS IF NOT AVAILABLE PUBLICALLY JUST SAY NOT AVAILABLE
                         - Generate a detailed consulting-style business analysis for:
 
 
