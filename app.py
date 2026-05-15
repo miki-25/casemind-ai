@@ -588,10 +588,10 @@ if run:
             live_context = get_live_company_context(company_name)
         
             prompt = f"""You are a business analyst. Return ONLY valid JSON, no markdown, no extra text.
-                        - VERY IMPOSTANT Competitors must be DIRECT competitors in the SAME industry and market segment only.
-                        - Use realistic insights and latest search on the web, news articles and the company website and social media platform for latest numbers for revenue also and if not available give the ans as not publically available.
-                        - Use company-specific KPIs and also one line each how did you calculate those data 
-                        - but MAJOR THING WHICH YOU NEED TO BE CAREFULL ABOUT IS DON'T PUT ANY ASSUMTION AND TRY TO PUT ASSUMED NUMBERS IF NOT AVAILABLE PUBLICALLY JUST SAY NOT AVAILABLE
+                        - VERY IMPOrTANT Competitors must be DIRECT competitors in the SAME industry and market segment only.
+                        - Use realistic insights and latest search on the web, news articles and the company website and social media platform for latest numbers
+                        - If information is uncertain or unavailable, say "Not publicly available".
+                        - Only use facts present in the provided context.
                         - Generate a detailed consulting-style business analysis for:
 Company: {company_name}
                         - You are given REAL live web search snippets about a company.
@@ -626,7 +626,7 @@ Replace ALL placeholder values with REAL data about {company_name}. Return only 
                 messages=[{"role": "user", "content": prompt}],
                 model="meta-llama/Llama-3.1-8B-Instruct",
                 max_tokens=4096,
-                temperature=0.15
+                temperature=0.05
             )
 
             raw = response.choices[0].message.content
