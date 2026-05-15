@@ -588,9 +588,9 @@ if run:
             live_context = get_live_company_context(company_name)
         
             prompt = f"""You are a business analyst. Return ONLY valid JSON, no markdown, no extra text.
-                        - VERY IMPOrTANT Competitors must be DIRECT competitors in the SAME industry and market segment only.
+                        - VERY IMPOrTANT Competitors must be DIRECT competitors and also example blinkits competiter can't be groffers beacause it is already acquired so do this for others search it on web in the SAME industry and market segment only.
                         - Use realistic insights and latest search on the web, news articles and the company website and social media platform for latest numbers
-                        - If information is uncertain or unavailable, say "Not publicly available".
+                        - very most important thing be carefull If information is uncertain or unavailable, say "Not publicly available".
                         - Only use facts present in the provided context.
                         - Generate a detailed consulting-style business analysis for:
 Company: {company_name}
