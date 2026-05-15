@@ -49,6 +49,31 @@ def fix_json(text):
 
     return text.strip()
 
+def get_live_company_context(company_name):
+
+    search_query = f"{company_name} latest news revenue funding products competitors market"
+
+    snippets = []
+
+    try:
+        with DDGS() as ddgs:
+
+            results = ddgs.text(
+                search_query,
+                max_results=8
+            )
+
+            for r in results:
+
+                title = r.get("title", "")
+                body = r.get("body", "")
+
+                snippets.append(f"TITLE: {title}\nBODY: {body}")
+
+    except Exception as e:
+        return ""
+
+    return "\n\n".join(snippets)
 # ================= GLOBAL CSS ================= #
 
 st.markdown("""
@@ -566,9 +591,13 @@ if run:
                         - Use company-specific KPIs and also one line each how did you calculate those data 
                         - but MAJOR THING WHICH YOU NEED TO BE CAREFULL ABOUT IS DON'T PUT ANY ASSUMTION AND TRY TO PUT ASSUMED NUMBERS IF NOT AVAILABLE PUBLICALLY JUST SAY NOT AVAILABLE
                         - Generate a detailed consulting-style business analysis for:
-
-
 Company: {company_name}
+                        - You are given REAL live web search snippets about a company.
+                        - Use these snippets heavily while generating insights
+                        - LIVE SEARCH CONTEXT:
+
+{live_context}
+
 
 Return this exact JSON with real, specific data:
 {{
