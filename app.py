@@ -561,7 +561,7 @@ if run:
         with st.spinner("⬡ Running deep analysis…"):
 
             prompt = f"""You are a business analyst. Return ONLY valid JSON, no markdown, no extra text.
-                        - Competitors must be DIRECT competitors in the SAME industry and market segment only.
+                        - VERY IMPOSTANT Competitors must be DIRECT competitors in the SAME industry and market segment only.
                         - Use realistic insights and latest search on the web, news articles and the company website and social media platform for latest numbers for revenue also and if not available give the ans as not publically available.
                         - Use company-specific KPIs and also one line each how did you calculate those data 
                         - but MAJOR THING WHICH YOU NEED TO BE CAREFULL ABOUT IS DON'T PUT ANY ASSUMTION AND TRY TO PUT ASSUMED NUMBERS IF NOT AVAILABLE PUBLICALLY JUST SAY NOT AVAILABLE
